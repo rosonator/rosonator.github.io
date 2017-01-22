@@ -1,0 +1,25 @@
+<div class="itzulpenContainer">
+	<div class="keyIndex">
+		<span ng-repeat="key in vm.keyIndex" ng-click="vm.refreshItzulpenSet(key)">
+			{{key}}
+		</span>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 col-md-6" ng-repeat="itzulpen in vm.itzulpenak | orderBy:'word'">
+			<div>
+				<div class="col-sm-6 ellipsis">
+					<strong>{{itzulpen.word}}</strong>
+				</div>
+				<div class="col-sm-2">
+					<i class="fa fa-fw" 
+					   ng-class="{'fa-eye': !itzulpen.display, 'fa-eye-slash': itzulpen.display}"
+					   ng-click="vm.toggleDisplay(itzulpen)"
+					   style="cursor:pointer"></i>
+				</div>
+				<div class="col-sm-4 ellipsis" ng-show="itzulpen.display" style="text-align:right">
+					{{itzulpen.translation}}
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>

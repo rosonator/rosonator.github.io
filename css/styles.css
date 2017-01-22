@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "AmaticRegular";
+  src: url("../fonts/AmaticRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "LearningCurve";
+  src: url("../fonts/LearningCurve_OT.otf") format("opentype"); }
+
+/* ANIMATIONS */
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+body {
+  background-color: #EEE;
+  font: 22px AmaticRegular; }
+
+p {
+  text-align: justify; }
+
+h2 {
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 22px; }
+
+.main-section {
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 25px; }
+
+.content {
+  padding: 20px;
+  animation: fadein 2s; }
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.keyIndex {
+  text-align: center;
+  padding-bottom: 20px; }
+  .keyIndex span {
+    margin: 5px;
+    font-weight: bold;
+    font-size: 26px;
+    cursor: pointer;
+    text-decoration: underline; }
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 0px;
+  background-color: #00bbae; }
+  .header h1 {
+    text-align: center;
+    margin: 0px;
+    font-size: 50px;
+    font-family: LearningCurve;
+    font-weight: bold;
+    color: #002220; }
+  .header .navbar {
+    margin: 0;
+    border: none;
+    border-bottom: 3px solid #00887e;
+    background-color: #00bbae; }
+    .header .navbar .navbar-toggle {
+      border: 2px solid #002220;
+      background-color: #00887e; }
+      .header .navbar .navbar-toggle .icon-bar {
+        background-color: #002220; }
+    .header .navbar .navbar-collapse {
+      margin: 0;
+      padding: 0;
+      border: none; }
+    .header .navbar .navbar-nav {
+      margin: 0; }
+      .header .navbar .navbar-nav li.active > a,
+      .header .navbar .navbar-nav li.active > a:hover,
+      .header .navbar .navbar-nav li.active > a:visited {
+        background-color: #00887e;
+        color: #002220;
+        font-weight: bold; }
+      .header .navbar .navbar-nav.hidden-xs li.active > a {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        animation: fadeinbackgoundcolor 2s; }
+
+@keyframes fadeinbackgoundcolor {
+  from {
+    background-color: #00bbae; }
+  to {
+    background-color: #00887e; } }
+      .header .navbar .navbar-nav li > a {
+        font-size: 25px;
+        font-family: LearningCurve;
+        color: #002220; }
+      .header .navbar .navbar-nav li > a:hover {
+        color: #002220;
+        font-weight: bold; }

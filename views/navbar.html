@@ -1,0 +1,48 @@
+<div class="navbar navbar-default" role="navigation">
+	<div class="container-fluid" style="padding:0px;">
+		<div class="navbar-header" style="margin:0;">
+  		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="margin-left:10px;">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+  		<div class="navbar-collapse collapse">
+    		<ul class="listanavbar nav navbar-nav hidden-lg hidden-md hidden-sm">
+      			<li id="nav1" ng-click="navbarActive(1)" class="active">
+      				<a href="#/" data-toggle="collapse" data-target=".navbar-collapse">
+      					Home
+      				</a>
+      			</li>
+      			<li id="nav2" ng-click="navbarActive(2)">
+      				<a href="#/castellanoToEuskara" data-toggle="collapse" data-target=".navbar-collapse">
+                Castellano-Euskera
+      				</a>
+      			</li>   
+            <li id="nav3" ng-click="navbarActive(3)">
+              <a href="#/euskaraToCastellano" data-toggle="collapse" data-target=".navbar-collapse">
+                Euskara-Gaztelaina
+              </a>
+            </li>             			
+    		</ul>
+    		<ul class="listanavbar nav navbar-nav hidden-xs">
+      			<li id="navb1" ng-click="navbarActive(1)" class="active">
+              <a href="#/">
+                Home
+              </a>
+            </li>
+            <li id="navb2" onclick="navbarActive(2)">
+              <a href="#/castellanoToEuskara">
+                Castellano-Euskera
+              </a>
+            </li>    
+            <li id="navb3" onclick="navbarActive(3)">
+              <a href="#/euskaraToCastellano">
+                Euskara-Gaztelaina
+              </a>
+            </li>       			
+    		</ul>
+  		</div>
+	</div>
+</div>
