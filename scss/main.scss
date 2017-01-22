@@ -1,0 +1,42 @@
+body {
+	//background-color: $primary-color;
+	background-color: #EEE;
+	font: 22px $content-font;
+}
+
+p {
+	text-align:justify;
+}
+
+h2 {
+	@include title-font(22px);
+}
+
+.main-section {
+	@include title-font(25px);
+}
+
+.content {
+	padding: 20px;
+    animation: fadein 2s;
+}
+.ellipsis {
+  	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.keyIndex {
+	text-align: center;
+	padding-bottom: 20px;
+	span {
+		margin: 5px;
+		font-weight: bold;
+		font-size: 26px;
+		cursor: pointer;
+		text-decoration: underline;
+	}
+}
+
+
+

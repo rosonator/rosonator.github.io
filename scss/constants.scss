@@ -1,0 +1,15 @@
+@include font-face("AmaticRegular", "../fonts/AmaticRegular", null, null, ttf ); 
+@include font-face("LearningCurve", "../fonts/LearningCurve_OT", null, null, otf );
+
+$content-font: AmaticRegular;
+$title-font: LearningCurve;
+
+$primary-color: #00EEDD;
+
+
+/* ANIMATIONS */
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

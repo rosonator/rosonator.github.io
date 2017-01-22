@@ -1,0 +1,68 @@
+.header {
+	padding-top: 20px;
+	padding-bottom: 0px;
+	background-color: darken($primary-color,10); 
+
+	h1 {
+		text-align: center;
+		margin: 0px;
+		font-size: 50px;
+		font-family: $title-font;
+		font-weight: bold;
+		color: darken($primary-color,40);
+	}
+
+	.navbar {
+		margin: 0;
+		border: none;
+		border-bottom: 3px solid darken($primary-color,20);
+		background-color: darken($primary-color,10); 
+
+		.navbar-toggle {
+			border: 2px solid darken($primary-color,40);
+			background-color: darken($primary-color,20); 
+			.icon-bar {
+				background-color: darken($primary-color,40); 
+			}
+		}
+
+		.navbar-collapse {
+			margin:0;
+			padding: 0;
+			border: none;
+		}
+		.navbar-nav {
+			margin: 0;
+
+			li.active > a, 
+			li.active > a:hover, 
+			li.active > a:visited {			
+				background-color: darken($primary-color,20); 
+				color: darken($primary-color,40);
+				font-weight: bold;	
+			}
+
+			&.hidden-xs li.active > a {
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;	
+	    		animation: fadeinbackgoundcolor 2s;	
+			}
+
+			@keyframes fadeinbackgoundcolor {
+			    from { background-color: darken($primary-color,10); }
+			    to   { background-color: darken($primary-color,20); }
+			}
+
+			li > a {
+				font-size: 25px;
+				font-family: $title-font;
+				color: darken($primary-color,40);
+			}
+
+			li > a:hover {
+				color: darken($primary-color,40);
+				font-weight: bold;
+			}
+		}
+	}
+}

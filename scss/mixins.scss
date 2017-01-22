@@ -1,0 +1,10 @@
+@mixin title-font($size) {
+	font-weight: bold;
+	text-decoration: underline;
+	text-align: center;
+	font-size: $size;
+}
+
+@mixin darkened-background ($color) {
+	background-color: darken($color, 0.1);
+}
