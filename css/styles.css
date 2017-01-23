@@ -51,6 +51,11 @@ h2 {
     cursor: pointer;
     text-decoration: underline; }
 
+@media (min-width: 992px) {
+  /* from MD on!! */
+  .bordered-on-md:nth-child(odd) {
+    border-right: 1px dashed #333; } }
+
 .header {
   padding-top: 20px;
   padding-bottom: 0px;
