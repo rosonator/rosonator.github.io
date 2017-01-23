@@ -11,17 +11,18 @@ gulp.task("scss", function () {
 	.pipe(gulp.dest("./css"));
 });
 
-
 gulp.task("js", function () {
-	return gulp.src(['./js/router.js','./js/**/*.js'])
+	return gulp.src([
+		'./js/router.js',
+		'./js/**/*.js',
+		'!./js/all.min.js'
+	])
 	.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 	.pipe(concat('all.min.js'))	
 	.pipe(gulp.dest("./js"));
 });
 
- 
 gulp.task('watch', function () {
   gulp.watch('./scss/**/*.scss', ['scss']);
 	gulp.watch('./js/**/*.js', ['js']);
 });
-
