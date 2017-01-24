@@ -13,8 +13,8 @@
 
 		function refreshItzulpenSet (key) {
 			if (!key) key = 'A';
-			if (languaje === "castellano") vm.itzulpenak = itzulpenFactory.getCastellano(key);
-			else vm.itzulpenak = itzulpenFactory.getEuskara(key);
+			if (languaje === "castellano") vm.itzulpenak = itzulpenFactory.getCastellano(vm.level, key);
+			else vm.itzulpenak = itzulpenFactory.getEuskara(vm.level, key);
 		}
 
 		function toggleDisplay (row) {
