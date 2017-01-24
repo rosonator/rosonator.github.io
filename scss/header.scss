@@ -1,9 +1,9 @@
 .header {
-	padding-top: 20px;
+	padding-top: 10px;
 	padding-bottom: 0px;
 	background-color: darken($primary-color,10); 
 
-	h1 {
+	h1, .navbar-title {
 		text-align: center;
 		margin: 0px;
 		font-size: 50px;
@@ -64,5 +64,6 @@
 				font-weight: bold;
 			}
 		}
+
 	}
 }

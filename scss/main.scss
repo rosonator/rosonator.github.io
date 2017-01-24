@@ -38,5 +38,13 @@ h2 {
 	}
 }
 
+@media (min-width: 992px) { 
+	/* from MD on!! */
+  	.bordered-on-md:nth-child(odd) {
+		border-right: 1px dashed #333;
+
+  }
+}
+
 
 
