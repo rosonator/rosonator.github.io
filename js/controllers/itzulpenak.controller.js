@@ -2,9 +2,12 @@
 
 	'use strict';
 
-	function ItzulpenController ($scope, itzulpenFactory, languaje) {
+	function ItzulpenController ($scope, itzulpenFactory, itzulpenLevels, languaje) {
 	
 		var vm = this;
+		vm.languaje = languaje;
+		vm.itzulpenLevels = itzulpenLevels;
+
 		vm.refreshItzulpenSet = refreshItzulpenSet;
 		vm.toggleDisplay = toggleDisplay;
 
@@ -12,9 +15,10 @@
 		else vm.keyIndex = ['A','B','D','E','F','G','H','I','J','K','L','M','N','O','P','R','S','T','U','X','Z'];
 
 		function refreshItzulpenSet (key) {
-			if (!key) key = 'A';
-			if (languaje === "castellano") vm.itzulpenak = itzulpenFactory.getCastellano(vm.level, key);
-			else vm.itzulpenak = itzulpenFactory.getEuskara(vm.level, key);
+			if (key) vm.key = key;
+			if (!vm.key) vm.key = 'A';
+			if (languaje === "castellano") vm.itzulpenak = itzulpenFactory.getCastellano(vm.level, vm.key);
+			else vm.itzulpenak = itzulpenFactory.getEuskara(vm.level, vm.key);
 		}
 
 		function toggleDisplay (row) {
@@ -24,7 +28,7 @@
 		refreshItzulpenSet();
 	};
 
-ItzulpenController.$inject = ['$scope', 'itzulpenFactory', 'languaje'];
+ItzulpenController.$inject = ['$scope', 'itzulpenFactory', 'itzulpenLevels', 'languaje'];
 
 	angular.module('moteApp')
 		.controller('itzulpenController', ItzulpenController);

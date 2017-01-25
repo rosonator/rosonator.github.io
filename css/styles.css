@@ -41,15 +41,20 @@ h2 {
   overflow: hidden;
   text-overflow: ellipsis; }
 
-.keyIndex {
+.keyIndex, .levelSelector {
   text-align: center;
   padding-bottom: 20px; }
-  .keyIndex span {
+  .keyIndex span, .levelSelector span {
     margin: 5px;
     font-weight: bold;
     font-size: 26px;
-    cursor: pointer;
+    cursor: pointer; }
+  .keyIndex span.active, .levelSelector span.active {
     text-decoration: underline; }
+  .keyIndex label, .levelSelector label {
+    padding-right: 20px; }
+    .keyIndex label input[type='radio'], .levelSelector label input[type='radio'] {
+      height: 30px; }
 
 @media (min-width: 992px) {
   /* from MD on!! */

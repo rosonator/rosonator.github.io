@@ -1,6 +1,38 @@
 <div class="itzulpenContainer">
+	<div class="levelSelector">
+		<label class="radio-inline">
+	      	<input type="radio" 
+			       ng-model="vm.level" 
+			       ng-value=""
+			       ng-change="vm.refreshItzulpenSet()"> 
+	      	<span ng-class="{'active': !vm.level}">
+	      		{{vm.languaje === 'castellano' ? 'Todo' : 'Dena'}}
+	      	</span>
+	    </label>
+	    <label class="radio-inline">
+	      	<input type="radio" 
+	      		   ng-model="vm.level" 
+	      		   ng-value="vm.itzulpenLevels.A_2_1"
+	      		   ng-change="vm.refreshItzulpenSet()"> 
+  		   	<span ng-class="{'active': vm.level === vm.itzulpenLevels.A_2_1}">
+  		   		A2.1
+  		   	</span>
+	    </label>
+	    <label class="radio-inline">
+	      	<input type="radio"
+	      		   ng-model="vm.level" 
+	      		   ng-value="vm.itzulpenLevels.A_2_2"
+	      		   ng-change="vm.refreshItzulpenSet()"
+				   ng-class="{'active': key === vm.key}"> 
+  		   	<span ng-class="{'active': vm.level === vm.itzulpenLevels.A_2_2}">
+  		   		A2.2
+  		   	</span>
+	    </label>
+	</div>
 	<div class="keyIndex">
-		<span ng-repeat="key in vm.keyIndex" ng-click="vm.refreshItzulpenSet(key)">
+		<span ng-repeat="key in vm.keyIndex" 
+			  ng-click="vm.refreshItzulpenSet(key)"
+			  ng-class="{'active': key === vm.key}">
 			{{key}}
 		</span>
 	</div>
