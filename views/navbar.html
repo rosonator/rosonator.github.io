@@ -15,34 +15,34 @@
 		</div>
   		<div class="navbar-collapse collapse">
     		<ul class="listanavbar nav navbar-nav hidden-lg hidden-md hidden-sm">
-      			<li ng-class="{'active':vm.state === 'home'}">
-      				<a href="#/home" data-toggle="collapse" data-target=".navbar-collapse">
-      					Sarrera
+      			<li id="nav1" ng-click="navbarActive(1)" class="active">
+      				<a href="#/" data-toggle="collapse" data-target=".navbar-collapse">
+      					Home
       				</a>
       			</li>
-      			<li ng-class="{'active':vm.state === 'castellanoToEuskara'}">
+      			<li id="nav2" ng-click="navbarActive(2)">
       				<a href="#/castellanoToEuskara" data-toggle="collapse" data-target=".navbar-collapse">
                 Castellano-Euskera
       				</a>
       			</li>   
-            <li ng-class="{'active':vm.state === 'euskaraToCastellano'}">
+            <li id="nav3" ng-click="navbarActive(3)">
               <a href="#/euskaraToCastellano" data-toggle="collapse" data-target=".navbar-collapse">
                 Euskara-Gaztelaina
               </a>
             </li>             			
     		</ul>
     		<ul class="listanavbar nav navbar-nav hidden-xs">
-      			<li ng-class="{'active':vm.state === 'home'}">
-              <a href="#/home">
-                Sarrera
+      			<li id="navb1" ng-click="navbarActive(1)" class="active">
+              <a href="#/">
+                Home
               </a>
             </li>
-            <li ng-class="{'active':vm.state === 'castellanoToEuskara'}">
+            <li id="navb2" onclick="navbarActive(2)">
               <a href="#/castellanoToEuskara">
                 Castellano-Euskera
               </a>
             </li>    
-            <li ng-class="{'active':vm.state === 'euskaraToCastellano'}">
+            <li id="navb3" onclick="navbarActive(3)">
               <a href="#/euskaraToCastellano">
                 Euskara-Gaztelaina
               </a>

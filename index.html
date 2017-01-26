@@ -10,6 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="vendors/angular/angular.min.js"></script>
 		<script src="vendors/angular/angular-route.min.js"></script>
+		<script src="vendors/jquery/jquery-1.11.3.js"></script>
 		<script src="vendors/bootstrap/js/bootstrap.js"></script>		
 		<script type="text/javascript" src="js/all.min.js"></script>
 		<link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
@@ -18,10 +19,20 @@
 	</head>
 	
 	<body>
+
+
 		<itzulpen-navbar></itzulpen-navbar>
 		
 		<div class="content" ng-view="">
 		</div>
+		
+		<script type="text/javascript">		
+			function navbarActive(id) {
+				$('.listanavbar li').removeClass('active');
+				$('#nav'+id).addClass('active');
+				$('#navb'+id).addClass('active');
+			}			
+		</script>
 	</body>
 </html>
 
