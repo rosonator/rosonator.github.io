@@ -17,7 +17,6 @@
 	 				} else return itzulpen;
 	 			} else return itzulpen;
 	 		});
- 			console.log(newList);
       		return $sce.trustAsHtml(newList.join(', '));
       	}
 	}
