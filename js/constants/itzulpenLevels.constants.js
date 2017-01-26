@@ -8,6 +8,6 @@
 	};
 
 
-	angular.module('moteApp')
+	angular.module('itzulpenApp')
 		.constant('itzulpenLevels', ItzulpenLevels);
 })();

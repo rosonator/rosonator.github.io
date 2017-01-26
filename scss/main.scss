@@ -26,7 +26,7 @@ h2 {
   	text-overflow: ellipsis;
 }
 
-.keyIndex, .levelSelector {
+.key-index, .level-selector {
 	text-align: center;
 	padding-bottom: 20px;
 	span {
@@ -45,6 +45,26 @@ h2 {
 			height: 30px;
 		}
 	}
+}
+
+.itzulpen-input {
+	height:30px; 
+	margin:2px; 
+	font-size:22px;
+}
+
+.highlighted-match-green {
+	background-color: #8bdc8b;
+	padding: 0px;
+	margin: 0px;
+	border-radius:3px;
+}
+
+.highlighted-match-red {
+	background-color: #de3f3f;
+	padding: 0px;
+	margin: 0px;
+	border-radius:3px;
 }
 
 @media (min-width: 992px) { 

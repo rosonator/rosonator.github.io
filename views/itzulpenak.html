@@ -1,5 +1,5 @@
 <div class="itzulpenContainer">
-	<div class="levelSelector">
+	<div class="level-selector">
 		<label class="radio-inline">
 	      	<input type="radio" 
 			       ng-model="vm.level" 
@@ -29,7 +29,7 @@
   		   	</span>
 	    </label>
 	</div>
-	<div class="keyIndex">
+	<div class="key-index">
 		<span ng-repeat="key in vm.keyIndex" 
 			  ng-click="vm.refreshItzulpenSet(key)"
 			  ng-class="{'active': key === vm.key}">
@@ -38,19 +38,25 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12 col-md-6 bordered-on-md" ng-repeat="itzulpen in vm.itzulpenak | orderBy:'word'">
-			<div>
-				<div class="col-xs-5 ellipsis">
-					<strong>{{itzulpen.word}}</strong>
-				</div>
-				<div class="col-xs-2" style="text-align:center;">
-					<i class="fa fa-fw" 
-					   ng-class="{'fa-eye': !itzulpen.display, 'fa-eye-slash': itzulpen.display}"
-					   ng-click="vm.toggleDisplay(itzulpen)"
-					   style="cursor:pointer"></i>
-				</div>
-				<div class="col-xs-5 ellipsis" ng-show="itzulpen.display" style="text-align:right">
+			<div class="col-xs-5 ellipsis">
+				<strong>{{itzulpen.word}}</strong>
+			</div>
+			<div class="col-xs-2" style="text-align:center;">
+				<i class="fa fa-fw" 
+				   ng-class="{'fa-eye': !itzulpen.display, 'fa-eye-slash': itzulpen.display}"
+				   ng-click="vm.toggleDisplay(itzulpen)"
+				   style="cursor:pointer"></i>
+			</div>
+			<div class="col-xs-5 ellipsis" style="text-align:right; height:35px;">
+				<div ng-show="itzulpen.display"
+				     ng-bind-html="itzulpen.translation | highlightItzulpenMatch:itzulpen.match"
+				     style="font-weight:bold;">
 					{{itzulpen.translation}}
 				</div>
+				<input ng-show="!itzulpen.display" 
+					   type="text" 
+					   class="form-control itzulpen-input" 
+					   ng-model="itzulpen.match">
 			</div>
 		</div>
 	</div>	

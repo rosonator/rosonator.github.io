@@ -1,6 +1,6 @@
-var moteApp = angular.module('moteApp', ['ngRoute']);
+var itzulpenApp = angular.module('itzulpenApp', ['ngRoute']);
 
-moteApp.config(function ($routeProvider) {
+itzulpenApp.config(function ($routeProvider) {
 	$routeProvider
 	.when ('/home',
 	{

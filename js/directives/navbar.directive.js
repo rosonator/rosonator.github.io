@@ -24,7 +24,7 @@
 
 ItzulpenNavbar.$inject = [];
 
-	angular.module('moteApp')
+	angular.module('itzulpenApp')
 		.directive('itzulpenNavbar', ItzulpenNavbar);
 
 })();

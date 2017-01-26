@@ -41,20 +41,37 @@ h2 {
   overflow: hidden;
   text-overflow: ellipsis; }
 
-.keyIndex, .levelSelector {
+.key-index, .level-selector {
   text-align: center;
   padding-bottom: 20px; }
-  .keyIndex span, .levelSelector span {
+  .key-index span, .level-selector span {
     margin: 5px;
     font-weight: bold;
     font-size: 26px;
     cursor: pointer; }
-  .keyIndex span.active, .levelSelector span.active {
+  .key-index span.active, .level-selector span.active {
     text-decoration: underline; }
-  .keyIndex label, .levelSelector label {
+  .key-index label, .level-selector label {
     padding-right: 20px; }
-    .keyIndex label input[type='radio'], .levelSelector label input[type='radio'] {
+    .key-index label input[type='radio'], .level-selector label input[type='radio'] {
       height: 30px; }
+
+.itzulpen-input {
+  height: 30px;
+  margin: 2px;
+  font-size: 22px; }
+
+.highlighted-match-green {
+  background-color: #8bdc8b;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 3px; }
+
+.highlighted-match-red {
+  background-color: #de3f3f;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 3px; }
 
 @media (min-width: 992px) {
   /* from MD on!! */

@@ -30,6 +30,6 @@
 
 ItzulpenController.$inject = ['$scope', 'itzulpenFactory', 'itzulpenLevels', 'languaje'];
 
-	angular.module('moteApp')
+	angular.module('itzulpenApp')
 		.controller('itzulpenController', ItzulpenController);
 })();

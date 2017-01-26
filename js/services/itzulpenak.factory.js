@@ -877,7 +877,7 @@
 			{ castellano: "Tipo", euskara: "Mota", level: 3},
 			{ castellano: "Componente", euskara: "Osagai", level: 3},
 			{ castellano: "Espuma", euskara: "Apar", level: 3},
-			{ castellano: "E", euskara: "Bakar", level: 3},
+			{ castellano: "Único", euskara: "Bakarra", level: 3},
 			{ castellano: "Virus informático", euskara: "Birus informátiko", level: 3},
 			{ castellano: "Brillante", euskara: "Distiratsu", level: 3},
 			{ castellano: "Dentífrico", euskara: "Hortzetako pasta", level: 3},
@@ -1009,7 +1009,7 @@
 			{ castellano: "Broma", euskara: "Txantxa", level: 4},
 			{ castellano: "Cuidar", euskara: "Zaindu", level: 4},
 			{ castellano: "Novia", euskara: "Emaztegai", level: 4},
-			{ castellano: "Efraile", euskara: "Fraide", level: 4},
+			{ castellano: "Fraile", euskara: "Fraide", level: 4},
 			{ castellano: "Enorme", euskara: "Galanta", level: 4},
 			{ castellano: "Tremendo", euskara: "Galanta", level: 4},
 			{ castellano: "Susto tremendo", euskara: "Susto galanta", level: 4},
@@ -1131,6 +1131,6 @@
 
 	ItzulpenFactory.$inject = [];
 
-	angular.module('moteApp')
+	angular.module('itzulpenApp')
 		.factory('itzulpenFactory', ItzulpenFactory);
 })();
