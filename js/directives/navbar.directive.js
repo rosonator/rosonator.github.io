@@ -8,20 +8,21 @@
 	    	restrict: 'E',
 	    	templateUrl: 'views/navbar.html',
 	    	scope: {},
-	    	link: function ($scope) {
-	    		$scope.navbarActive = navbarActive;
+	    	controller: ['$location', '$scope', function ($location, $scope) {
+	    		var vm = this;
 
-				function navbarActive(id) {
-					$('.listanavbar li').removeClass('active');
-					$('#nav'+id).addClass('active');
-					$('#navb'+id).addClass('active');
-				}
-	    	}
+	    		vm.state = $location.$$absUrl.split("/#/")[1];
+
+				$scope.$on('$locationChangeSuccess', function(ev, newLocation, oldLocation) { 
+				   vm.state = newLocation.split("/#/")[1];
+				});
+	    	}],
+	    	controllerAs: 'vm'
 		};			
 	}
 
 
-	ItzulpenNavbar.$inject = [];
+ItzulpenNavbar.$inject = [];
 
 	angular.module('moteApp')
 		.directive('itzulpenNavbar', ItzulpenNavbar);
