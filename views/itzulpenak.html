@@ -37,7 +37,8 @@
 		</span>
 	</div>
 	<div class="row">
-		<div class="col-xs-12 col-md-6 bordered-on-md" ng-repeat="itzulpen in vm.itzulpenak | orderBy:'word'">
+		<div class="col-xs-12 col-md-6 bordered-on-md" 
+			 ng-repeat="itzulpen in vm.itzulpenak | orderBy:'word'">
 			<div class="col-xs-5 ellipsis">
 				<strong>{{itzulpen.word}}</strong>
 			</div>
@@ -56,7 +57,8 @@
 				<input ng-show="!itzulpen.display" 
 					   type="text" 
 					   class="form-control itzulpen-input" 
-					   ng-model="itzulpen.match">
+					   ng-model="itzulpen.match"
+					   ng-keypress="vm.inputKeyPress($event, itzulpen)">
 			</div>
 		</div>
 	</div>	
