@@ -39,7 +39,7 @@
 	<div class="row">
 		<div class="col-xs-12 col-md-6 bordered-on-md" 
 			 ng-repeat="itzulpen in vm.itzulpenak | orderBy:'word'">
-			<div class="col-xs-5 ellipsis">
+			<div class="col-xs-5 ellipsis" style="padding: 2px;">
 				<strong>{{itzulpen.word}}</strong>
 			</div>
 			<div class="col-xs-2" style="text-align:center;">
@@ -48,7 +48,7 @@
 				   ng-click="vm.toggleDisplay(itzulpen)"
 				   style="cursor:pointer"></i>
 			</div>
-			<div class="col-xs-5 ellipsis" style="text-align:right; height:35px;">
+			<div class="col-xs-5 ellipsis" style="text-align:right; height:35px; padding: 2px;">
 				<div ng-show="itzulpen.display"
 				     ng-bind-html="itzulpen.translation | highlightItzulpenMatch:itzulpen.match"
 				     style="font-weight:bold;">
