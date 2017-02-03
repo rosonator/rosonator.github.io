@@ -54,11 +54,12 @@
 				     style="font-weight:bold;">
 					{{itzulpen.translation}}
 				</div>
-				<input ng-show="!itzulpen.display" 
+				<input id="itzulpen_input_{{$index}}"
+					   ng-show="!itzulpen.display" 
 					   type="text" 
 					   class="form-control itzulpen-input" 
 					   ng-model="itzulpen.match"
-					   ng-keypress="vm.inputKeyPress($event, itzulpen)">
+					   ng-keypress="vm.inputKeyPress($event, itzulpen, $index < vm.itzulpenak.length - 1 ? $index : -1)">
 			</div>
 		</div>
 	</div>	

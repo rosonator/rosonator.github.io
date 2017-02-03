@@ -26,9 +26,12 @@
 			row.display = !row.display;
 		};
 
-		function inputKeyPress (keyEvent, row) {
-			if (keyEvent.which === 13) 
+		function inputKeyPress (keyEvent, row, index) {
+			if (keyEvent.which === 13) {
 				toggleDisplay(row);
+				$('#itzulpen_input_' + (index + 1)).focus();
+				console.log(index);
+			}
 		}
 
 		refreshItzulpenSet();
